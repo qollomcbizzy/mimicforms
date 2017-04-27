@@ -8,12 +8,13 @@ $("#blanks form").submit(function(event){
   var exclamationinput = $("input#exclamation").val();
   var verbinput = $("input#verb").val();
   var nouninput = $("input#noun").val();
-  $(".person1").append(person1input);
-  $(".person2").append(person2input);
-  $(".animal").append(animalinput);
-  $(".exclamation").append(exclamationinput);
-  $(".verb").append(verbinput);
-  $(".noun").append(nouninput);
+  /*we replace the exixting text with text rather than it appending*/
+  $(".person1").text(person1input);
+  $(".person2").text(person2input);
+  $(".animal").text(animalinput);
+  $(".exclamation").text(exclamationinput);
+  $(".verb").text(verbinput);
+  $(".noun").text(nouninput);
   $("#story").show();
   /*prevents the default form event when submitting,we pass the function below
   to call back what we submitted */
